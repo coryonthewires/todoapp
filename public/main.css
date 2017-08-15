@@ -1,0 +1,13 @@
+body { margin: 0; background-color: #6cbfd1; padding: 4px; }
+
+
+.box{
+    margin-top: 4px;
+    background: grey;
+    padding: 20px;
+    width: 50%;
+    height: 20%;
+    border:thin;
+    border-color: black;
+    border-radius: 1em;
+}

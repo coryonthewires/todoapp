@@ -1,0 +1,33 @@
+<link rel="import" href="../bower_components/polymer/polymer-element.html">
+
+<dom-module id="my-form">
+    <template>
+        <style>
+            .card{ background: white; border-radius: 5px; width: 50%; padding: 1em;}
+        </style>
+
+        <div class="card">
+            <h3>{{text}}</h3>
+            <form action="/post" method="post">
+                <input type="text" name="value" value="" />
+                <input type="submit" name="submit" value="Submit" />
+            </form>
+        </div>
+        
+    </template>
+    <script>
+    class MyForm extends Polymer.Element {
+      static get is() {return "my-form";}
+      static get properties() {
+          return {
+              text: {
+                  type: "String",
+                  value: "Card Title",
+              }
+          }
+      }
+
+}
+customElements.define(MyForm.is, MyForm);
+    </script>
+</dom-module>

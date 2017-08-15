@@ -1,0 +1,28 @@
+<link rel="import" href="../bower_components/polymer/polymer-element.html">
+
+<dom-module id="my-header">
+    <template>
+        <style>
+            .head { height: 60px; width: 100%; background-color: white; padding: 0 18px; z-index: 500; box-shadow: 0 1px 0 0 rgba(0,0,0,0.066); line-height: 60px;}
+            .title { display: inline-block; height: 100%; vertical-align: middle; font-weight: bold; }
+        </style>
+       <div class="head">
+           <div class="title">{{title}}</div>
+       </div>
+    </template>
+    <script>
+    class MyHeader extends Polymer.Element {
+      static get is() {return "my-header";}
+      static get properties() {
+          return {
+              title: {
+                  type: "String",
+                  value: "Title",
+              }
+          }
+      }
+    
+}
+customElements.define(MyHeader.is, MyHeader);
+    </script>
+</dom-module>
